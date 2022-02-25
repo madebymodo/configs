@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import chalk from "chalk";
-import { existsexistsSync, Sync, writeFileSync } from "fs";
+import { existsSync, writeFileSync } from "fs";
 import path from "path";
 import os from "os";
 import spawn from "cross-spawn";
