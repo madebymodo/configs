@@ -1,33 +1,10 @@
 import chalk from "chalk";
-import { Command } from "commander";
 import { readFileSync, writeFileSync } from "fs";
-import { readFile } from "fs/promises";
 import path from "path";
 import os from "os";
 import spawn from "cross-spawn";
 
-const packageInfo = JSON.parse(
-  await readFile(new URL("./package.json", import.meta.url))
-);
-
-function isUsingYarn() {
-  return (process.env.npm_config_user_agent || "").indexOf("yarn") === 0;
-}
-
 const dependencies = ["gitlab:cescoc/eslint-config-modo-base"];
-
-function init() {
-  const script = new Command()
-    .command(packageInfo.name)
-    .version(packageInfo.version)
-    .description("Split a string into substrings and display as an array")
-    .argument("<string>", "string to split")
-    .option("-d, --debug", "output extra debugging");
-  script.parse();
-}
-
-// console.log(packageInfo.name);
-// init();
 
 const create = async () => {
   console.log(`Installing ${chalk.cyan("MODO")} tools...`);
