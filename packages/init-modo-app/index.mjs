@@ -16,7 +16,16 @@ const create = async () => {
   if (hasPackageJson) {
     console.log(`Detected existing package.json...`);
   } else {
-    console.log(`Initializing new project...`);
+    console.log(`Initializing new dummy project...`);
+    const packageJson = {
+      name: "app-name",
+      version: "0.0.0",
+      private: true,
+    };
+    writeFileSync(
+      path.join(process.cwd(), "package.json"),
+      JSON.stringify(packageJson, null, 2) + os.EOL
+    );
   }
 
   const prettierConfig = {
