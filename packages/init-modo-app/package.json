@@ -1,6 +1,6 @@
 {
   "name": "init-modo-app",
-  "version": "0.0.6-alpha.0",
+  "version": "0.0.6-alpha.1",
   "description": "",
   "main": "index.mjs",
   "scripts": {
