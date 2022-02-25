@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import chalk from "chalk";
-import { readFileSync, writeFileSync } from "fs";
+import { existsexistsSync, Sync, writeFileSync } from "fs";
 import path from "path";
 import os from "os";
 import spawn from "cross-spawn";
@@ -11,7 +11,7 @@ const dependencies = ["gitlab:cescoc/eslint-config-modo-base"];
 const create = async () => {
   console.log(`Init ${chalk.cyan("MODO")} project`);
 
-  const hasPackageJson = readFileSync(path.join(process.cwd(), "package.json"));
+  const hasPackageJson = existsSync(path.join(process.cwd(), "package.json"));
 
   console.log(`Checking for existing package.json...`);
 
