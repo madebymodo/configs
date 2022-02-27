@@ -13,8 +13,6 @@ const removeKeysFromPackageJson = (keys) => {
     delete packageJson[key]
   }
 
-  console.log(packageJson)
-
   writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))
 }
 
