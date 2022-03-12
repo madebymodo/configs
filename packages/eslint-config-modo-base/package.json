@@ -1,0 +1,11 @@
+{
+  "name": "@madebymodo/eslint-config",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {},
+  "license": "MIT",
+  "peerDependencies": {
+    "eslint": ">=8.10",
+    "eslint-plugin-import": "^2.25.4"
+  }
+}
